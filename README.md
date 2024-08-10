@@ -3,18 +3,20 @@
 </p>
 <p align="center">
   <a href="https://travis-ci.org/JZPPP/Electorrent_CN">
-    <img src="https://travis-ci.org/JZPPP/Electorrent_CN.svg?branch=master">
+
   </a>
   <a href="https://github.com/JZPPP/Electorrent_CN/releases/latest">
-    <img src="https://img.shields.io/github/release/JZPPP/Electorrent_CN.svg?maxAge=86400">
+
   </a>
   <a href="http://www.somsubhra.com/github-release-stats/?username=tympanix&repository=Electorrent">
-    <img src="https://img.shields.io/github/downloads/JZPPP/Electorrent_CN/total.svg?maxAge=86400">
+
   </a>
 </p>
 
 # 关于此仓库
-Electorrent的个人汉化版
+Electorrent的个人汉化版，小孩子不懂事汉化着玩的
+ <a href="https://github.com/JZPPP/Electorrent_CN/releases/latest">点击下载</a>
+【如果从原版覆盖安装后下载列表空白请在设置-布局设置中重新勾选需要显示的内容】
 原仓库[tympanix/Electorrent](https://github.com/tympanix/Electorrent)
 # Electorrent
 No more! Stop copy/pasting magnet links and uploading torrent files through a tedious webinterface. Electorrent is your new desktop remote torrenting application. Remote control your NAS, VPS, seedbox - you name it.
