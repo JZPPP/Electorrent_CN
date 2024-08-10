@@ -15,7 +15,7 @@
 
 # 关于此仓库
 Electorrent的个人汉化版，小孩子不懂事汉化着玩的
- <a href="https://github.com/JZPPP/Electorrent_CN/releases/latest">
+ <a href="https://github.com/JZPPP/Electorrent_CN/releases/latest">点击下载</a>
 【如果从原版覆盖安装后下载列表空白请在设置-布局设置中重新勾选需要显示的内容】
 原仓库[tympanix/Electorrent](https://github.com/tympanix/Electorrent)
 # Electorrent
