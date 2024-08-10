@@ -15,7 +15,7 @@
 
 # 关于此仓库
 Electorrent的个人汉化版，小孩子不懂事汉化着玩的
- <a href="https://github.com/JZPPP/Electorrent_CN/releases/latest">点击下载</a>
+ <a href="https://github.com/JZPPP/Electorrent_CN/releases/latest">点击下载</a>  
 【如果从原版覆盖安装后下载列表空白请在设置-布局设置中重新勾选需要显示的内容】
 
 # Electorrent
@@ -54,6 +54,3 @@ Electorrent可以连接到以下 BitTorrent 客户端:
 </p>
 
 
-* **I can't connect to rTorrent what is wrong?**
-
- When using rTorrent you have to configure your http server correctly. Follow [this guide](https://github.com/rakshasa/rtorrent/wiki/RPC-Setup-XMLRPC) to make sure you have it set up correctly. Alternative you may be able to use `/plugins/httprpc/action.php` as the path if your have the HTTPRPC plugin installed.
