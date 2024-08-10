@@ -1,6 +1,7 @@
 name: Electorrent Release
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
