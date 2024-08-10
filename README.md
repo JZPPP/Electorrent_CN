@@ -17,12 +17,12 @@
 Electorrent的个人汉化版，小孩子不懂事汉化着玩的
  <a href="https://github.com/JZPPP/Electorrent_CN/releases/latest">点击下载</a>
 【如果从原版覆盖安装后下载列表空白请在设置-布局设置中重新勾选需要显示的内容】
-原仓库[tympanix/Electorrent](https://github.com/tympanix/Electorrent)
-# Electorrent
-No more! Stop copy/pasting magnet links and uploading torrent files through a tedious webinterface. Electorrent is your new desktop remote torrenting application. Remote control your NAS, VPS, seedbox - you name it.
 
+# Electorrent
+Electorrent是您新的桌面远程种子下载应用程序。
+原仓库[tympanix/Electorrent](https://github.com/tympanix/Electorrent)
 ## Support
-Electorrent can connect to the following bittorrent clients:
+Electorrent可以连接到以下 BitTorrent 客户端:
 * [µTorrent](http://www.utorrent.com/)
 * [qBittorrent](http://www.qbittorrent.org/) (v3.2.x and above)
 * [Transmission](https://transmissionbt.com)
@@ -31,23 +31,10 @@ Electorrent can connect to the following bittorrent clients:
 * [Deluge](https://deluge-torrent.org/)
 
 ## Downloads
-*Please note: I do not own code signing certificates which may results in anti-virus warnings!*
-* [Windows](https://electorrent.vercel.app/download/win32) (64 bit only)
-* [MacOS](https://electorrent.vercel.app/download/dmg)
-* [Linux](https://electorrent.vercel.app/download/appimage)
+* 仅测试WIN11 64位可用
+* [Windows](https://github.com/JZPPP/Electorrent_CN/releases/latest)
 
-## Features
-- [x] Connects to your favorite torrent client
-- [x] Handles the magnet link protocol when browsing websites
-- [x] Upload local torrent files by browsing your filesystem (Ctrl/Cmd+O)
-- [x] Drag-and-drop support for torrent files
-- [x] Paste magnet links directly from your clipboard (Ctrl/Cmd+I)
-- [x] Quickly change between multiple server configurations
-- [x] Native desktop notifications
-- [x] Fuzzy searching of torrents
-- [x] Built in certificate trust system (for self-signed certificates)
-- [x] Easy one click installer using Squirrel framework
-- [x] Automatic updates straight from the GitHub repository!
+
 
 ## Screenshots
 <p align="center">
@@ -66,14 +53,6 @@ Electorrent can connect to the following bittorrent clients:
   </a>
 </p>
 
-## FAQ
- * **Your program sucks. It doesn't support my bittorrent client**
-
- What an opportunity! Now open an issue telling me which bittorrent client you would like to see next :)
-
- * **What kind of technologies are used to build this?**
-
- The application is build around [Electron](http://electron.atom.io/), [AngularJS](https://angularjs.org/) and [SemanticUI](http://semantic-ui.com/)
 
 * **I can't connect to rTorrent what is wrong?**
 
