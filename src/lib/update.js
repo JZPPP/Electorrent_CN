@@ -211,7 +211,7 @@ function notifyCheckingUpdate() {
 
     notify({
         title: 'Checking for update',
-        message: '找到新的版本',
+        message: '正在检查更新',
         type: 'info'
     })
 }
@@ -229,7 +229,7 @@ function notifyUpToDate() {
 
     notify({
         title: 'Up to date!',
-        message: '已经更新到最新版',
+        message: '已经是最新版',
         type: 'positive'
     })
 }

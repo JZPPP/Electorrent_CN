@@ -373,14 +373,14 @@ export class SynologyClient extends TorrentClient<SynologyTorrent> {
      */
     actionHeader: TorrentActionList<SynologyTorrent> = [
         {
-            label: 'Start',
+            label: '开始',
             type: 'button',
             color: 'green',
             click: this.start,
             icon: 'play'
         },
         {
-            label: 'Pause',
+            label: '暂停',
             type: 'button',
             color: 'yellow',
             click: this.pause,
@@ -401,7 +401,7 @@ export class SynologyClient extends TorrentClient<SynologyTorrent> {
      */
     contextMenu: ContextActionList<SynologyTorrent> = [
         {
-            label: 'Remove Torrent',
+            label: '删除Torrent',
             click: this.remove,
             icon: 'remove'
         }

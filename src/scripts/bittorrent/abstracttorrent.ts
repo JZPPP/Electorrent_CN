@@ -255,21 +255,21 @@ export abstract class Torrent implements TorrentProps {
     })
 
     static COL_PEERS = new Column({
-      name: 'Peers',
+      name: '用户',
       enabled: false,
       template: '{{torrent.peersText()}}',
       attribute: 'peersConnected'
     })
 
     static COL_SEEDS = new Column({
-      name: 'Seeds',
+      name: '种子',
       enabled: false,
       template: '{{torrent.seedsText()}}',
       attribute: 'seedsConnected'
     })
 
     static COL_QUEUE = new Column({
-      name: 'Queue',
+      name: '下载序列',
       enabled: false,
       template: '{{torrent.torrentQueueOrder | torrentQueue}}',
       attribute: 'torrentQueueOrder',
@@ -277,7 +277,7 @@ export abstract class Torrent implements TorrentProps {
     })
 
     static COL_ETA = new Column({
-      name: 'ETA',
+      name: '预计完成时间',
       enabled: false,
       template: '{{torrent.eta | eta}}',
       attribute: 'eta',
@@ -285,7 +285,7 @@ export abstract class Torrent implements TorrentProps {
     })
 
     static COL_RATIO = new Column({
-      name: 'Ratio',
+      name: '分享率',
       enabled: false,
       template: '{{torrent.ratio | torrentRatio}}',
       attribute: 'ratio'

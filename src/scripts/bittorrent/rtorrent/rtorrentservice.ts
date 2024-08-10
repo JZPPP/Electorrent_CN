@@ -167,7 +167,7 @@ export class RtorrentClient extends TorrentClient<RtorrentTorrent> {
 
     actionHeader: TorrentActionList<RtorrentTorrent> = [
       {
-        label: "Start",
+        label: "开始",
         type: "button",
         color: "green",
         click: this.start,
@@ -175,7 +175,7 @@ export class RtorrentClient extends TorrentClient<RtorrentTorrent> {
         role: "resume",
       },
       {
-        label: "Stop",
+        label: "停止",
         type: "button",
         color: "red",
         click: this.stop,
@@ -183,7 +183,7 @@ export class RtorrentClient extends TorrentClient<RtorrentTorrent> {
         role: "stop",
       },
       {
-        label: "Labels",
+        label: "标签",
         click: this.label,
         type: "labels",
       },
@@ -191,38 +191,38 @@ export class RtorrentClient extends TorrentClient<RtorrentTorrent> {
 
     contextMenu: ContextActionList<RtorrentTorrent> = [
       {
-        label: "Recheck",
+        label: "重新检查",
         click: this.recheck,
         icon: "checkmark",
       },
       {
-        label: "Priority",
+        label: "优先级",
         menu: [
           {
-            label: "High",
+            label: "高",
             click: this.priorityHigh,
           },
           {
-            label: "Normal",
+            label: "普通",
             click: this.priorityNormal,
           },
           {
-            label: "Low",
+            label: "低",
             click: this.priorityLow,
           },
           {
-            label: "Don't Download",
+            label: "不要下载",
             click: this.priorityOff,
           },
         ],
       },
       {
-        label: "Remove",
+        label: "移除队列",
         click: this.remove,
         icon: "remove",
       },
       {
-        label: "Remove and Delete",
+        label: "移除队列并删除文件",
         click: this.deleteAndErase,
         icon: "trash",
         role: "delete",

@@ -127,7 +127,7 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
             ]
         },
         {
-            label: 'View',
+            label: '显示',
             submenu: [
                 {
                     label: '刷新',

@@ -146,37 +146,37 @@ export class DelugeClient extends TorrentClient<DelugeTorrent> {
 
     contextMenu: ContextActionList<DelugeTorrent> = [
         {
-            label: 'Verify',
+            label: '重新检查',
             click: this.verify,
             icon: 'checkmark'
         },
         {
-            label: 'Move Queue Up',
+            label: '上移队列',
             click: this.queueUp,
             icon: 'arrow up'
         },
         {
-            label: 'Move Queue Down',
+            label: '下移队列',
             click: this.queueDown,
             icon: 'arrow down'
         },
         {
-            label: 'Queue Top',
+            label: '置顶',
             click: this.queueTop,
             icon: 'chevron circle up'
         },
         {
-            label: 'Queue Bottom',
+            label: '置底',
             click: this.queueBottom,
             icon: 'chevron circle down'
         },
         {
-            label: 'Remove',
+            label: '移除队列',
             click: this.remove,
             icon: 'remove'
         },
         {
-            label: 'Remove and delete',
+            label: '移除队列并删除文件',
             click: this.removeAndDelete,
             icon: 'trash',
             role: 'delete'

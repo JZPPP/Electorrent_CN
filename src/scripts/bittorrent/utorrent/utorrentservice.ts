@@ -368,7 +368,7 @@ export class UtorrentClient extends TorrentClient<UtorrentTorrent> {
 
   actionHeader: TorrentActionList<UtorrentTorrent> = [
     {
-      label: "Start",
+      label: "开始",
       type: "button",
       color: "green",
       click: this.start,
@@ -376,14 +376,14 @@ export class UtorrentClient extends TorrentClient<UtorrentTorrent> {
       role: "resume",
     },
     {
-      label: "Pause",
+      label: "暂停",
       type: "button",
       color: "yellow",
       click: this.pause,
       icon: "pause",
     },
     {
-      label: "Stop",
+      label: "停止",
       type: "button",
       color: "red",
       click: this.stop,
@@ -391,7 +391,7 @@ export class UtorrentClient extends TorrentClient<UtorrentTorrent> {
       role: "stop",
     },
     {
-      label: "Labels",
+      label: "标签",
       click: this.setLabel,
       type: "labels",
     },
@@ -399,44 +399,44 @@ export class UtorrentClient extends TorrentClient<UtorrentTorrent> {
 
   contextMenu: ContextActionList<UtorrentTorrent> = [
     {
-      label: "Recheck",
+      label: "重新检查",
       click: this.recheck,
       icon: "checkmark",
     },
     {
-      label: "Force Start",
+      label: "强制开始",
       click: this.forcestart,
       icon: "flag",
     },
     {
-      label: "Move Up Queue",
+      label: "上移队列",
       click: this.queueup,
       icon: "arrow up",
     },
     {
-      label: "Move Queue Down",
+      label: "下移队列",
       click: this.queuedown,
       icon: "arrow down",
     },
     {
-      label: "Remove",
+      label: "移除队列",
       click: this.remove,
       icon: "remove",
       role: "delete",
     },
     {
-      label: "Remove And",
+      label: "移除队列并...",
       menu: [
         {
-          label: "Delete Torrent",
+          label: "删除Torrent",
           click: this.removetorrent,
         },
         {
-          label: "Delete Data",
+          label: "删除本地文件",
           click: this.removedata,
         },
         {
-          label: "Delete All",
+          label: "全部删除",
           click: this.removedatatorrent,
         },
       ],

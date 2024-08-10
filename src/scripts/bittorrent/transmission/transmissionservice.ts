@@ -323,7 +323,7 @@ export class TransmissionClient extends TorrentClient<TransmissionTorrent> {
      */
     actionHeader: TorrentActionList<TransmissionTorrent> = [
       {
-        label: "Start",
+        label: "开始",
         type: "button",
         color: "green",
         click: this.start,
@@ -331,7 +331,7 @@ export class TransmissionClient extends TorrentClient<TransmissionTorrent> {
         role: "resume",
       },
       {
-        label: "Stop",
+        label: "停止",
         type: "button",
         color: "red",
         click: this.stop,
@@ -339,17 +339,17 @@ export class TransmissionClient extends TorrentClient<TransmissionTorrent> {
         role: "stop",
       },
       {
-        label: "More",
+        label: "更多",
         type: "dropdown",
         color: "blue",
         icon: "plus",
         actions: [
           {
-            label: "Pause All",
+            label: "全部暂停",
             click: this.pauseAll,
           },
           {
-            label: "Resume All",
+            label: "全部继续",
             click: this.resumeAll,
           },
         ],
@@ -366,40 +366,40 @@ export class TransmissionClient extends TorrentClient<TransmissionTorrent> {
      */
     contextMenu: ContextActionList<TransmissionTorrent> = [
       {
-        label: "Start",
+        label: "开始",
         click: this.start,
         icon: "play",
       },
       {
-        label: "Pause",
+        label: "暂停",
         click: this.stop,
         icon: "pause",
       },
       {
-        label: "Verify",
+        label: "重新检查",
         click: this.verify,
         icon: "checkmark",
       },
       {
-        label: "Move Up Queue",
+        label: "上移队列",
         click: this.queueUp,
         icon: "arrow up",
       },
       {
-        label: "Move Queue Down",
+        label: "下移队列",
         click: this.queueDown,
         icon: "arrow down",
       },
       {
-        label: "Remove",
+        label: "移除队列",
         menu: [
           {
-            label: "Torrent",
+            label: "移除队列",
             icon: "remove",
             click: this.remove,
           },
           {
-            label: "Torrent and Local Data",
+            label: "移除队列并删除文件",
             icon: "remove",
             click: this.removeAndLocal,
             role: "delete",

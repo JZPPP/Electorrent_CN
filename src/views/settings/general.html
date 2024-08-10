@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<h1>General Settings</h1>
+<h1>常规设置</h1>
 <div class="ui three doubling stackable cards">
     <div class="ui card">
         <div class="content">
@@ -13,7 +13,7 @@
         </div>
         <div class="center aligned extra content">
             <dropdown class="fluid" title="Connection Mode" ng-model="settings.startup">
-                <dropdown-group data-value="default">默认</dropdown-group>
+                <dropdown-group data-value="default">默认服务器</dropdown-group>
                 <dropdown-group data-value="ask">询问</dropdown-group>
                 <dropdown-group data-value="latest">使用最后连接的服务器</dropdown-group>
             </dropdown>
@@ -57,17 +57,17 @@
         <div class="content">
             <div class="header">
                 <i class="expand icon"></i>
-                Table Resize Style
+                布局风格
             </div>
             <div class="description">
-                Changes how the torrent table behaves when resized
+                修改下载列表的布局风格
             </div>
         </div>
         <div class="center aligned extra content">
             <dropdown class="fluid" title="Resize Mode" ng-model="settings.ui.resizeMode">
-                <dropdown-group data-value="FixedResizer">Static</dropdown-group>
-                <dropdown-group data-value="OverflowResizer">Overflow</dropdown-group>
-                <dropdown-group data-value="BasicResizer">Relative</dropdown-group>
+                <dropdown-group data-value="FixedResizer">静态</dropdown-group>
+                <dropdown-group data-value="OverflowResizer">填充</dropdown-group>
+                <dropdown-group data-value="BasicResizer">相对</dropdown-group>
             </dropdown>
         </div>
     </div>
@@ -84,9 +84,9 @@
         </div>
         <div class="center aligned extra content">
             <dropdown class="fluid" title="Resize Mode" ng-model="settings.refreshRate">
-                <dropdown-group data-value="1000">Fast (1 second)</dropdown-group>
-                <dropdown-group data-value="2000">Default (2 seconds)</dropdown-group>
-                <dropdown-group data-value="4000">Slow (4 seconds)</dropdown-group>
+                <dropdown-group data-value="1000">快(1秒)</dropdown-group>
+                <dropdown-group data-value="2000">默认(2秒)</dropdown-group>
+                <dropdown-group data-value="4000">慢(4秒)</dropdown-group>
             </dropdown>
         </div>
     </div>
@@ -108,10 +108,10 @@
         <div class="content">
             <div class="header">
                 <i class="cubes icon"></i>
-                Compact Listings
+                紧凑列表
             </div>
             <div class="description">
-                Minimize space when listing torrents
+                使用最小空间列出种子
             </div>
         </div>
         <div class="center aligned extra content">
@@ -138,10 +138,10 @@
         <div class="content">
             <div class="header">
                 <i class="paint brush icon"></i>
-                Clean Names
+                重命名
             </div>
             <div class="description">
-                清理种子名称，从而使它们更具可读性，替换标点符号等
+                格式化种子名称，从而使它们更具可读性，替换标点符号等
             </div>
         </div>
         <div class="center aligned extra content">
@@ -152,7 +152,7 @@
         <div class="content">
             <div class="header">
                 <i class="pin icon"></i>
-                Fixed Header
+                固定标题
             </div>
             <div class="description">
                 在滚动浏览种子时，始终保持显示的列标题

@@ -313,7 +313,7 @@ export class QBittorrentClient extends TorrentClient<QBittorrentTorrent> {
         icon: "arrow up",
       },
       {
-        label: "下移队列n",
+        label: "下移队列",
         click: this.decreasePrio,
         icon: "arrow down",
       },
