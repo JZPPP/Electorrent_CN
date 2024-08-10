@@ -3,13 +3,13 @@
 </p>
 <p align="center">
   <a href="https://travis-ci.org/JZPPP/Electorrent_CN">
-    <img src="https://travis-ci.org/JZPPP/Electorrent_CN.svg?branch=master">
+
   </a>
   <a href="https://github.com/JZPPP/Electorrent_CN/releases/latest">
-    <img src="https://img.shields.io/github/release/JZPPP/Electorrent_CN.svg?maxAge=86400">
+
   </a>
   <a href="http://www.somsubhra.com/github-release-stats/?username=tympanix&repository=Electorrent">
-    <img src="https://img.shields.io/github/downloads/JZPPP/Electorrent_CN/total.svg?maxAge=86400">
+
   </a>
 </p>
 
