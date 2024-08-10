@@ -13,6 +13,9 @@
   </a>
 </p>
 
+# 关于此仓库
+Electorrent的个人汉化版
+原仓库[tympanix/Electorrent](https://github.com/tympanix/Electorrent)
 # Electorrent
 No more! Stop copy/pasting magnet links and uploading torrent files through a tedious webinterface. Electorrent is your new desktop remote torrenting application. Remote control your NAS, VPS, seedbox - you name it.
 
