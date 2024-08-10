@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  rutorrent:
+    image: linuxserver/rutorrent:${VERSION:-latest}
+    ports:
+      - 8080:80
+      - 5000:5000
+      - 51413:51413
+      - 6881:6881/udp
+    tmpfs:
+      - /downloads
+      - /config
+
+networks:
+  default:
+    external:
+      name: electorrent_p2p

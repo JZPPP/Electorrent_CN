@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  transmission:
+    image: linuxserver/transmission:${VERSION:-latest}
+    environment:
+      - USER=username
+      - PASS=password
+    ports:
+      - 9091:9091
+
+networks:
+  default:
+    external:
+      name: electorrent_p2p
+

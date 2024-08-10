@@ -1,0 +1,47 @@
+name: Electorrent Release
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+env:
+  NODE_VERSION: 14.x
+  ELECTRON_IS_DEV: 0
+
+jobs:
+
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - name: Install apt packages
+      run: sudo apt-get update && sudo apt-get install -y graphicsmagick icnsutils
+      if: runner.os == 'Linux'
+    - name: Checkout source code
+      uses: actions/checkout@v2
+    - name: Install nodejs
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    - name: Cache npm modules
+      uses: actions/cache@v2
+      with:
+        path: |
+          node_modules
+          */*/node_modules
+        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Install npm dependencies
+      run: npm install
+    - name: Build distribution
+      run: npm run dist
+    - name: Release artifacts
+      run: npm run release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

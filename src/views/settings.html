@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<div id="page-settings" class="wrapper" ng-controller="settingsController as settings">
+
+    <div class="ui stretched segment">
+        <div class="settings sidebar">
+            <ul class="nav">
+                <li ng-class="activeOn('general')" ng-click="gotoPage('general')">
+                    <i class="large settings icon"></i>
+                    General Settings
+                </li>
+                <li ng-class="activeOn('connection')" ng-click="gotoPage('connection')">
+                    <i class="large sitemap icon"></i>
+                    Connection
+                </li>
+                <li ng-class="activeOn('layout')" ng-click="gotoPage('layout')">
+                    <i class="large list layout icon"></i>
+                    Layout
+                </li>
+                <li ng-class="activeOn('servers')" ng-click="gotoPage('servers')">
+                    <i class="large server icon"></i>
+                    Servers
+                </li>
+                <li ng-class="activeOn('about')" ng-click="gotoPage('about')">
+                    <i class="large at icon"></i>
+                    About
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="content" ng-switch="page">
+                <div ng-switch-when="general" id="page-settings-general">
+                    <div ng-include="'./views/settings/general.html'"></div>
+                </div>
+
+                <div ng-switch-when="connection" id="page-settings-connection">
+                    <div ng-include="'./views/settings/connection.html'"></div>
+                </div>
+
+                <div ng-switch-when="layout" id="page-settings-layout">
+                    <div ng-include="'./views/settings/layout.html'"></div>
+                </div>
+
+                <div ng-switch-when="servers" id="page-settings-servers">
+                    <div ng-include="'./views/settings/servers.html'"></div>
+                </div>
+
+                <div ng-switch-when="about" id="page-settings-about">
+                    <div ng-include="'./views/settings/about.html'"></div>
+                </div>
+
+            </div>
+            <div class="actions footer">
+                <a class="ui deny right labeled icon button" ng-click="close()">
+                    Cancel
+                    <i class="cancel icon"></i>
+                </a>
+                <a class="ui positive right labeled icon button" ng-click="save()">
+                    Save
+                    <i class="checkmark icon"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,55 @@
+version: "3"
+
+# Common configuration for a peer in the p2p network
+x-peer: &peer
+  build: peer
+  networks:
+    - p2p
+  volumes:
+    - ./data/shared:/shared
+  tmpfs:
+    - /srv
+  environment:
+    - P2P_PORT=2706
+  command: ["/start", "leech"]
+
+
+services:
+  # Opentracker (http://erdgeist.org/arts/software/opentracker/)
+  # A local torrent tracker used in an ad-hoc torrent network to test
+  # with real P2P traffic.
+  tracker:
+    hostname: tracker
+    build: tracker
+    ports:
+      - 6969:6969
+      - 6969:6969/udp
+    networks:
+      - p2p
+
+
+  # A peer in the ad-hoc torrent network that announces torrents on the P2P
+  # network using the local tracker (see above). Used to provide content to
+  # the P2P network for testing file transmission.
+  peer01:
+    hostname: peer01
+    <<: *peer
+    ports:
+      - 2706:2706
+    command: ["/start", "seed"]
+
+  # A peer that is leeching (downloading files) from other peers in the network
+  peer02:
+    hostname: peer02
+    <<: *peer
+    command: ["/start", "leech"]
+
+volumes:
+  shared:
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+
+networks:
+  p2p:
+    name: electorrent_p2p

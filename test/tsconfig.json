@@ -1,0 +1,33 @@
+{
+    "extends": "@tsconfig/node14/tsconfig.json",
+    "include": [
+        "./"
+    ],
+    "compilerOptions": {
+        "lib": [
+            "es6"
+        ],
+        "module": "commonjs",
+        "target": "es2020",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "forceConsistentCasingInFileNames": true,
+        "types": [
+            "node",
+            "webdriverio/async",
+            "@types/mocha",
+            "@types/chai",
+            "@types/chai-as-promised",
+        ],
+        "typeRoots": [
+            "types",
+            "../node_modules/@types",
+            "../node_modules/webdriverio/types"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

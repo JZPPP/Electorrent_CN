@@ -1,0 +1,5 @@
+/*******************************
+             Form
+*******************************/
+
+@loaderDimmerColor: fadeout(@pageForeground, 50%);

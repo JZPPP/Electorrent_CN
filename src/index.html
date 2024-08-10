@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="torrentApp">
+    <head ng-controller="themeController">
+        <meta charset="UTF-8">
+        <title>Electorrent</title>
+
+        <link rel="stylesheet" href="css/themes/light.css">
+        <link rel="stylesheet" ng-href="css/themes/{{theme}}.css">
+
+        <!-- build:css css/vendor.css -->
+        <link rel="stylesheet" href="../bower_components/angular-table-resize/dist/angular-table-resize.min.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-controller="mainController" ready-broadcast>
+        <div class="main wrapper">
+
+            <!-- Loading Spinner -->
+            <div ng-show="showLoading" class="overlay animated">
+                <div class="ui active inverted solid dimmer">
+                    <div class="ui huge text loader">{{statusText}}</div>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <div ng-include="'./views/notifications.html'"></div>
+
+            <!-- Settings Screen -->
+            <div ng-show="showSettings()" class="overlay animated">
+                <div ng-include="'./views/settings.html'"></div>
+            </div>
+
+            <!-- Welcome Screen -->
+            <div ng-show="showWelcome()" class="overlay animated">
+                <div ng-include="'./views/welcome.html'"></div>
+            </div>
+
+            <!-- Server Selection -->
+            <div ng-show="showServers()" class="overlay animated">
+                <div ng-include="'./views/servers.html'"></div>
+            </div>
+
+            <!-- Torrents -->
+            <div ng-show="showTorrents" drag-and-drop>
+                <div ng-include="'./views/torrents.html'"></div>
+            </div>
+
+        </div>
+
+        <!-- Dependencies -->
+
+        <!-- Insert this line above script imports  -->
+        <script>
+            if (typeof module === 'object') {
+                window.module = module;
+                module = undefined;
+            }
+        </script>
+
+        <!-- build:js ./scripts/vendor.js -->
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/angular/angular.js" charset="utf-8"></script>
+        <script src="../bower_components/angular-resource/angular-resource.min.js" charset="utf-8"></script>
+        <script src="../bower_components/angular-animate/angular-animate.js" charset="utf-8"></script>
+        <script src="../bower_components/angular-table-resize/dist/angular-table-resize.js" charset="utf-8"></script>
+        <script src="../bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js" charset="utf-8"></script>
+        <script src="../bower_components/moment/moment.js" charset="utf-8"></script>
+        <script src="../bower_components/semantic/dist/semantic.min.js" charset="utf-8"></script>
+        <script src="../bower_components/marked/lib/marked.js" charset="utf-8"></script>
+        <script src="../bower_components/angular-marked/dist/angular-marked.js" charset="utf-8"></script>
+        <script src="../bower_components/jquery-ui/jquery-ui.js" charset="utf-8"></script>
+        <script src="../bower_components/angular-ui-sortable/sortable.js" charset="utf-8"></script>
+        <script src="../bower_components/underscore/underscore.js" charset="utf-8"></script>
+        <script src="../bower_components/base64-js/base64js.min.js" charset="utf-8"></script>
+        <script src="../bower_components/fuse.js/dist/fuse.js" charset="utf-8"></script>
+        <script src="../bower_components/mousetrap/mousetrap.js" charset="utf-8"></script>
+        <!-- endbuild -->
+
+        <!-- Insert this line after script imports -->
+        <script>
+            if (window.module)
+                module = window.module;
+        </script>
+
+        <!-- Application bundle -->
+        <script src="main.js" charset="utf-8"></script> 
+
+        <!-- build:dev -->
+        <!-- Connect to server process -->
+        <script>
+            try {
+                const isDev = require('./lib/electorrent').isDevelopment()
+                if (isDev) {
+                    require('electron-connect').client.create()
+                }
+            } catch (e) {
+                console.error("Development environment failed", e)
+            }
+        </script>
+        <!-- end:build -->
+    </body>
+</html>

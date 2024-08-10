@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  utorrent:
+    image: ekho/utorrent:${VERSION:-latest}
+    ports:
+      - 8080:8080
+    tmpfs:
+      - /data:uid=1001,gid=1001
+
+networks:
+  default:
+    external:
+      name: electorrent_p2p
