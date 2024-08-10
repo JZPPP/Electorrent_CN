@@ -15,7 +15,8 @@
 
 # 关于此仓库
 Electorrent的个人汉化版，小孩子不懂事汉化着玩的
-【如果从原版覆盖安装后下载列表空白请再设置-布局设置中重新勾选需要显示的内容】
+
+【如果从原版覆盖安装后下载列表空白请在设置-布局设置中重新勾选需要显示的内容】
 原仓库[tympanix/Electorrent](https://github.com/tympanix/Electorrent)
 # Electorrent
 No more! Stop copy/pasting magnet links and uploading torrent files through a tedious webinterface. Electorrent is your new desktop remote torrenting application. Remote control your NAS, VPS, seedbox - you name it.
