@@ -12,18 +12,18 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
 
     const template = [
         {
-            label: 'File',
+            label: '文件',
             id: 'file',
             submenu: [
                 {
-                    label: "Add Torrent",
+                    label: "添加Torrent",
                     accelerator: "CmdOrCtrl+O",
                     click: function() {
                         electron.torrents.browse(false);
                     }
                 },
                 {
-                    label: "Add Torrent (Advanced)",
+                    label: "添加Torrent (高级选项)",
                     id: "torrent-file-add-advanced",
                     accelerator: "CmdOrCtrl+Shift+O",
                     visible: true,
@@ -32,14 +32,14 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
                     }
                 },
                 {
-                    label: "Paste Torrent URL",
+                    label: "粘贴Torrent链接",
                     accelerator: "CmdOrCtrl+I",
                     click: function() {
                         $bittorrent.uploadFromClipboard();
                     }
                 },
                 {
-                    label: "Paste Torrent URL (Advanced)",
+                    label: "粘贴Torrent链接(高级选项)",
                     id: "torrent-url-add-advanced",
                     accelerator: "CmdOrCtrl+Shift+I",
                     visible: false,
@@ -51,7 +51,7 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
                     type: 'separator'
                 },
                 {
-                    label: 'Settings',
+                    label: '设置',
                     accelerator: 'Ctrl+,',
                     click: function() {
                         $rootScope.$broadcast('show:settings');
@@ -61,21 +61,21 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
                     type: 'separator'
                 },
                 {
-                    label: 'Exit',
+                    label: '退出',
                     role: 'quit'
                 }
             ]
         },
         {
-            label: 'Edit',
+            label: '编辑',
             submenu: [
                 {
-                    label: 'Undo',
+                    label: '撤销',
                     accelerator: 'CmdOrCtrl+Z',
                     role: 'undo'
                 },
                 {
-                    label: 'Redo',
+                    label: '重做',
                     accelerator: 'Shift+CmdOrCtrl+Z',
                     role: 'redo'
                 },
@@ -83,29 +83,29 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
                     type: 'separator'
                 },
                 {
-                    label: 'Find',
+                    label: '查找',
                     accelerator: 'CmdOrCtrl+F',
                     click() {
                         $rootScope.$broadcast('search:torrent');
                     }
                 },
                 {
-                    label: 'Cut',
+                    label: '剪切',
                     accelerator: 'CmdOrCtrl+X',
                     role: 'cut'
                 },
                 {
-                    label: 'Copy',
+                    label: '复制',
                     accelerator: 'CmdOrCtrl+C',
                     role: 'copy'
                 },
                 {
-                    label: 'Paste',
+                    label: '粘贴',
                     accelerator: 'CmdOrCtrl+V',
                     role: 'paste'
                 },
                 {
-                    label: 'Remove',
+                    label: '移除',
                     accelerator: 'Delete',
                     click() {
                         if (document.activeElement.nodeName !== 'INPUT') {
@@ -114,7 +114,7 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
                     }
                 },
                 {
-                    label: 'Select All',
+                    label: '全选',
                     accelerator: 'CmdOrCtrl+A',
                     click() {
                         if (document.activeElement.nodeName === 'INPUT') {
@@ -130,7 +130,7 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
             label: 'View',
             submenu: [
                 {
-                    label: 'Reload',
+                    label: '刷新',
                     visible: electron.program.debug,
                     accelerator: 'CmdOrCtrl+R',
                     click(item, focusedWindow) {
@@ -138,7 +138,7 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
                     }
                 },
                 {
-                    label: 'Toggle Full Screen',
+                    label: '全屏',
                     accelerator: process.platform === 'darwin' ? 'Ctrl+Command+F' : 'F11',
                     click(item, focusedWindow) {
                         if (focusedWindow)
@@ -146,7 +146,7 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
                     }
                 },
                 {
-                    label: 'Toggle Developer Tools',
+                    label: '开发者工具',
                     visible: electron.program.debug,
                     accelerator: 'Ctrl+Shift+I',
                     click(item, focusedWindow) {
@@ -157,36 +157,36 @@ export let menuWin = ['electron', '$rootScope', '$bittorrent', 'notificationServ
             ]
         },
         {
-            label: 'Servers',
+            label: '服务器',
             id: 'servers',
             submenu: []
         },
         {
-            label: 'Window',
+            label: '窗口',
             role: 'window',
             submenu: [
                 {
-                    label: 'Minimize',
+                    label: '最小化',
                     accelerator: 'CmdOrCtrl+M',
                     role: 'minimize'
                 },
                 {
-                    label: 'Close',
+                    label: '关闭',
                     accelerator: 'CmdOrCtrl+W',
                     role: 'close'
                 },
             ]
         },
         {
-            label: 'Help',
+            label: '帮助',
             role: 'help',
             submenu: [
                 {
-                    label: 'Learn More',
+                    label: '关于',
                     click() { electron.shell.openExternal('https://github.com/JZPPP/Electorrent_CN'); }
                 },
                 {
-                    label: 'Check For Updates',
+                    label: '检查更新',
                     click() { electron.updater.checkForUpdates(true) }
                 }
             ]

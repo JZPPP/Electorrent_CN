@@ -201,7 +201,7 @@ function notify({ title = '', message = '', type = 'info'}) {
 function notifyUpdateError() {
     notify({
         title: 'Update Error',
-        message: 'Could not update Electorrent. Please visit the website instead',
+        message: '无法更新，请访问仓库进行下载',
         type: 'negative'
     })
 }
@@ -211,7 +211,7 @@ function notifyCheckingUpdate() {
 
     notify({
         title: 'Checking for update',
-        message: 'Checking for new updates',
+        message: '找到新的版本',
         type: 'info'
     })
 }
@@ -219,7 +219,7 @@ function notifyCheckingUpdate() {
 function notifyUpdateAvailable() {
     notify({
         title: 'Update Available!',
-        message: 'We are downloading the newest version of Electorrent for you!',
+        message: '正在下载新的版本',
         type: 'info'
     })
 }
@@ -229,7 +229,7 @@ function notifyUpToDate() {
 
     notify({
         title: 'Up to date!',
-        message: 'Your version of Electorrent is up to date',
+        message: '已经更新到最新版',
         type: 'positive'
     })
 }
@@ -237,7 +237,7 @@ function notifyUpToDate() {
 function notifyConnectionError() {
     notify({
         title: 'Update Error',
-        message: 'Could not check version automatically. Please visit the website instead',
+        message: '无法更新，请访问仓库进行下载',
         type: 'negative'
     })
 }

@@ -253,7 +253,7 @@ export class QBittorrentClient extends TorrentClient<QBittorrentTorrent> {
 
     actionHeader: TorrentActionList<QBittorrentTorrent> = [
       {
-        label: "Start",
+        label: "开始",
         type: "button",
         color: "green",
         click: this.resume,
@@ -261,7 +261,7 @@ export class QBittorrentClient extends TorrentClient<QBittorrentTorrent> {
         role: "resume",
       },
       {
-        label: "Pause",
+        label: "暂停",
         type: "button",
         color: "red",
         click: this.pause,
@@ -269,23 +269,23 @@ export class QBittorrentClient extends TorrentClient<QBittorrentTorrent> {
         role: "stop",
       },
       {
-        label: "More",
+        label: "更多",
         type: "dropdown",
         color: "blue",
         icon: "plus",
         actions: [
           {
-            label: "Pause All",
+            label: "全部暂停",
             click: this.pauseAll,
           },
           {
-            label: "Resume All",
+            label: "全部继续",
             click: this.resumeAll,
           },
         ],
       },
       {
-        label: "Labels",
+        label: "标签",
         click: this.setCategory,
         type: "labels",
       },
@@ -303,44 +303,44 @@ export class QBittorrentClient extends TorrentClient<QBittorrentTorrent> {
      */
     contextMenu: ContextActionList<QBittorrentTorrent> = [
       {
-        label: "Recheck",
+        label: "重新检查",
         click: this.recheck,
         icon: "checkmark",
       },
       {
-        label: "Move Up Queue",
+        label: "上移队列",
         click: this.increasePrio,
         icon: "arrow up",
       },
       {
-        label: "Move Queue Down",
+        label: "下移队列n",
         click: this.decreasePrio,
         icon: "arrow down",
       },
       {
-        label: "Queue Top",
+        label: "置顶",
         click: this.topPrio,
         icon: "chevron circle up",
       },
       {
-        label: "Queue Bottom",
+        label: "置底",
         click: this.bottomPrio,
         icon: "chevron circle down",
       },
       {
-        label: "Sequential Download",
+        label: "顺序下载",
         click: this.toggleSequentialDownload,
         check: function (torrent: QBittorrentTorrent) {
           return torrent.sequentialDownload;
         },
       },
       {
-        label: "Remove",
+        label: "移除队列",
         click: this.delete,
         icon: "remove",
       },
       {
-        label: "Remove And Delete",
+        label: "移除队列并删除文件",
         click: this.deleteAndRemove,
         icon: "trash",
         role: "delete",

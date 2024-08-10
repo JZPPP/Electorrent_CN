@@ -204,7 +204,7 @@ export abstract class Torrent implements TorrentProps {
     }
 
     static COL_NAME = new Column({
-      name: 'Name',
+      name: '名称',
       enabled: true,
       template: '{{settings.ui.cleanNames ? torrent.decodedName : torrent.name}}',
       attribute: 'decodedName',
@@ -212,35 +212,35 @@ export abstract class Torrent implements TorrentProps {
     })
 
     static COL_SIZE = new Column({
-      name: 'Size',
+      name: '大小',
       enabled: true,
       template: '{{torrent.size | bytes}}',
       attribute: 'size'
     })
 
     static COL_DOWNSPEED = new Column({
-      name: 'Down',
+      name: '下载速度',
       enabled: true,
       template: '{{torrent.downloadSpeed | speed}}',
       attribute: 'downloadSpeed'
     })
 
     static COL_UPSPEED = new Column({
-      name: 'Up',
+      name: '上传速度',
       enabled: true,
       template: '{{torrent.uploadSpeed | speed}}',
       attribute: 'uploadSpeed'
     })
 
     static COL_PROGRESS = new Column({
-      name: 'Progress',
+      name: '进度',
       enabled: true,
       template: '<div progress="torrent"></div>',
       attribute: 'percent'
     })
 
     static COL_LABEL = new Column({
-      name: 'Label',
+      name: '标签',
       enabled: true,
       template: '{{torrent.label}}',
       attribute: 'label',
@@ -248,7 +248,7 @@ export abstract class Torrent implements TorrentProps {
     })
 
     static COL_DATEADDED = new Column({
-      name: 'Date Added',
+      name: '添加时间',
       enabled: true,
       template: '<span time="torrent.dateAdded"></span>',
       attribute: 'dateAdded'

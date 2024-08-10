@@ -5,7 +5,7 @@
       <div>
         <h2 class="ui image header">
           <div class="content">
-            Welcome to Electorrent
+            欢迎使用Electorrent汉化版ByJZPPP
           </div>
         </h2>
         <form
@@ -19,11 +19,11 @@
             <div class="ten wide field">
               <div class="ui left icon input">
                 <i class="world icon"></i>
-                <input type="text" id="connection-host" name="ip" ng-model="server.ip" placeholder="IP Address" />
+                <input type="text" id="connection-host" name="ip" ng-model="server.ip" placeholder="服务器地址" />
               </div>
             </div>
             <div class="six wide field">
-              <dropdown title="Protocol" id="connection-proto" class="fluid" ng-model="server.proto">
+              <dropdown title="协议" id="connection-proto" class="fluid" ng-model="server.proto">
                 <dropdown-group value="http" id="connection-proto-http" title="http">
                   http
                 </dropdown-group>
@@ -37,7 +37,7 @@
             <div class="field">
               <div class="ui left icon input">
                 <i class="user icon"></i>
-                <input type="text" id="connection-user" name="username" ng-model="server.user" placeholder="Username" />
+                <input type="text" id="connection-user" name="username" ng-model="server.user" placeholder="用户名" />
               </div>
             </div>
             <div class="field">
@@ -48,14 +48,14 @@
                   id="connection-password"
                   name="password"
                   ng-model="server.password"
-                  placeholder="Password"
+                  placeholder="密码"
                 />
               </div>
             </div>
           </div>
           <div class="field">
             <dropdown
-              title="Client Program"
+              title="客户端程序"
               id="connection-client"
               class="fluid"
               ng-model="server.client"
@@ -75,7 +75,7 @@
             <div class="six wide field">
               <div class="ui left icon input">
                 <i class="sitemap icon"></i>
-                <input type="number" name="port" id="connection-port" ng-model="server.port" placeholder="Port" />
+                <input type="number" name="port" id="connection-port" ng-model="server.port" placeholder="端口" />
               </div>
             </div>
             <div class="ten wide field">
@@ -87,7 +87,7 @@
                   id="connection-path"
                   name="path"
                   ng-model="server.path"
-                  placeholder="Path"
+                  placeholder="路径"
                 />
               </div>
             </div>
@@ -99,7 +99,7 @@
             </div>
           </div>
           <button id="connection-submit" class="ui fluid large green labeled icon submit button">
-            <i class="checkmark icon"></i> Connect
+            <i class="checkmark icon"></i> 连接
           </button>
         </form>
       </div>

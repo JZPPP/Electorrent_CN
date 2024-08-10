@@ -127,7 +127,7 @@ export class DelugeClient extends TorrentClient<DelugeTorrent> {
 
     actionHeader: TorrentActionList<DelugeTorrent> = [
         {
-            label: 'Start',
+            label: '开始',
             type: 'button',
             color: 'green',
             click: this.resume,
@@ -135,7 +135,7 @@ export class DelugeClient extends TorrentClient<DelugeTorrent> {
             role: 'resume'
         },
         {
-            label: 'Pause',
+            label: '暂停',
             type: 'button',
             color: 'red',
             click: this.pause,
