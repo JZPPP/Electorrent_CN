@@ -1,11 +1,11 @@
 <div class="ui big modal">
     <i class="close icon"></i>
     <div class="header">
-        Untrusted Certificate
+        证书不可信
     </div>
     <div class="content">
-        <p>By trusting this certificate you accept the implications it can have on your security and understand
-        the consequences of doing so. Never trust a certificate which you do not know the origin of.</p>
+        <p>通过信任此证书，您接受它可能对您的安全产生的影响并理解
+            这样做的后果。永远不要相信您不知道其来源的证书。</p>
 
         <div class="ui equal width stackable grid">
 
@@ -14,24 +14,24 @@
             -->
             <div class="column">
                 <h3 class="ui dividing header">
-                  Certificate
+                  证书
                 </h3>
 
                 <div class="ui list">
                     <div class="item">
                         <i class="user secret big icon"></i>
                         <div class="content">
-                            <div class="ui sub header">Self Signed</div>
+                            <div class="ui sub header">自签名</div>
                             <span>
-                                <a ng-if="data.selfSigned">Yes</a>
-                                <a ng-if="!data.selfSigned">No</a>
+                                <a ng-if="data.selfSigned">是</a>
+                                <a ng-if="!data.selfSigned">否</a>
                             </span>
                         </div>
                     </div>
                     <div class="item">
                         <i class="calendar check big icon"></i>
                         <div class="content">
-                            <div class="ui sub header">Valid From</div>
+                            <div class="ui sub header">有效 来自</div>
                             <span>
                                 <a>{{data.validFrom | epoch}}</a>
                             </span>
@@ -40,7 +40,7 @@
                     <div class="item">
                         <i class="calendar times big icon"></i>
                         <div class="content">
-                            <div class="ui sub header">Valid To</div>
+                            <div class="ui sub header">有效 对于</div>
                             <span>
                                 <a>{{data.validTo | epoch}}</a>
                             </span>
@@ -49,7 +49,7 @@
                     <div class="item">
                         <i class="certificate big icon"></i>
                         <div class="content">
-                            <div class="ui sub header">Serial Number</div>
+                            <div class="ui sub header">序列号</div>
                             <span>
                                 <a>{{data.serialNumber}}</a>
                             </span>
@@ -184,10 +184,10 @@
               </div>
               <div class="six wide column">
                   <a class="ui red deny button">
-                      Cancel
+                      取消
                   </a>
                   <button type="submit" class="ui black ok right labeled icon button">
-                      Trust
+                      信任
                       <i class="address card icon"></i>
                   </button>
               </div>

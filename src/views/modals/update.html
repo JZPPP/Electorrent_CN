@@ -2,13 +2,13 @@
     <i class="close icon"></i>
     <div class="header">
 
-        Update Available
+        可用升级
     </div>
     <div class="content">
 
         <h4 class="ui header">
             <div class="content">
-                Version:
+                版本:
                 {{data.releaseName}}
                 <div class="sub header">{{data.releaseDate | releaseDate}}</div>
             </div>
@@ -16,7 +16,7 @@
 
         <h4 class="ui horizontal divider header" style="margin-top: 14px">
             <i class="tag icon"></i>
-            Release Notes
+            升级日志：
         </h4>
 
         <p marked="data.releaseNotes"></p>
@@ -24,10 +24,10 @@
     </div>
     <div class="actions">
         <a class="ui black deny button">
-            Update Later
+            晚些再说
         </a>
         <a class="ui positive right labeled icon button">
-            Quit And Install
+            退出并升级
             <i class="arrow alternate circle up icon"></i>
         </a>
     </div>
